@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvjyhrcxfapa7"]
+
+[ext_resource type="Script" path="res://Msgbox.cs" id="1_ke1k2"]
+[ext_resource type="Texture2D" uid="uid://clcj3hbfmvsuc" path="res://20180518_081304.jpg" id="1_sj884"]
+
+[node name="Panel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+show_behind_parent = true
+top_level = true
+layout_mode = 1
+offset_left = 448.0
+offset_top = 440.0
+offset_right = 768.0
+offset_bottom = 536.0
+size_flags_vertical = 4
+text = "테스트
+"
+icon = ExtResource("1_sj884")
+expand_icon = true
+script = ExtResource("1_ke1k2")
+
+[connection signal="pressed" from="Button" to="Button" method="OnClickButton"]
